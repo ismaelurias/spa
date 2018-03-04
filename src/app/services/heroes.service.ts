@@ -62,6 +62,10 @@ export class HeroesService{
     getHeroes():Heroe[]{
         return this.heroes;
     }
+    //Metodo para extraer solo un heroe en especifico 
+    getHeroe(idx:string){
+      return this.heroes[idx];
+    }
 }
 
 //Creacion de interfaz para evitar modificar los heroes del arreglo
