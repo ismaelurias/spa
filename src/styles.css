@@ -4,6 +4,9 @@ body{
 .main-container{
   margin-top: 20px;
 }
+.img-logo{
+  width: 150px;
+}
 
 /*Animaciones*/
 .animated {
