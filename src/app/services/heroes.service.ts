@@ -66,6 +66,22 @@ export class HeroesService{
     getHeroe(idx:string){
       return this.heroes[idx];
     }
+
+    //Metodo para buscar un heroe introducico por el usuario
+    buscarHeroes(termino:string):Heroe[]{
+      let heroesArr:Heroe[]=[];
+      termino = termino.toLowerCase();
+
+      for(let heroe of this.heroes){
+        let nombre = heroe.nombre.toLowerCase();
+
+        if(nombre.indexOf(termino)>=0){
+          heroesArr.push(heroe)
+        }
+      }
+  
+      return heroesArr;
+  }
 }
 
 //Creacion de interfaz para evitar modificar los heroes del arreglo
@@ -76,3 +92,4 @@ export interface Heroe{
     aparicion: string;
     casa: string;
 }
+
